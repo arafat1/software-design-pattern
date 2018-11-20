@@ -1,9 +1,5 @@
 package design.patterns.strategypattern;
 
-import design.patterns.strategypattern.MergeSort;
-import design.patterns.strategypattern.SortContext;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
