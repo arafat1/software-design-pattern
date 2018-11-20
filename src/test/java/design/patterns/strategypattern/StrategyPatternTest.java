@@ -4,12 +4,18 @@ import design.patterns.strategypattern.MergeSort;
 import design.patterns.strategypattern.SortContext;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class StrategyPatternTest {
     private SortContext sortContext;
+
+    @BeforeClass
+    public static void setUp() {
+        System.out.println("Executing Strategy Pattern -> Type: Behavioral");
+    }
 
     @Test
     public void executeStrategyMergeSort() {
