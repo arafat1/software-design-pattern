@@ -27,6 +27,7 @@ public class StrategyPatternTest {
         commander.changeStrategy(new DefenceStrategy());
         assertEquals("King order the commander to defend", "Executing DefenceStrategy", commander.executeStrategy());
 
+        // changing behavior at runtime
         commander.changeStrategy(new StandByStrategy());
         assertEquals("King order the commander to standby", "Executing StandByStrategy", commander.executeStrategy());
 
