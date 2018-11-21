@@ -1,4 +1,4 @@
-package design.patterns.strategypattern;
+package design.patterns.strategypattern.algorithms;
 
 public class QuickSort implements SortStrategy {
     @Override

@@ -1,5 +1,7 @@
 package design.patterns.strategypattern;
 
+import design.patterns.strategypattern.algorithms.SortStrategy;
+
 public class SortContext {
     private SortStrategy sortStrategy;
 
