@@ -5,4 +5,5 @@ Design Patterns Implemented so far:
 Pattern | Type
 ------- | -------
 Strategy | Behavioral
+Singleton | Creational
 Simple Factory (Not a pattern) | Creational
