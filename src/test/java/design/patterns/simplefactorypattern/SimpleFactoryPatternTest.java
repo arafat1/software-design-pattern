@@ -16,18 +16,18 @@ public class SimpleFactoryPatternTest {
     @Test
     public void createMergeSortTest() {
         SortAlgorithm algo = AlgorithmFactory.getAlgorithm(AlgorithmType.MERGE);
-        assertEquals("Expecting Merge Sort", "Executing MergeSort", algo.sort());
+        assertEquals("Expecting Merge Sort", "Executing AttackStrategy", algo.sort());
     }
 
     @Test
     public void createQuickSortTest() {
         SortAlgorithm algo = AlgorithmFactory.getAlgorithm(AlgorithmType.QUICK);
-        assertEquals("Expecting Quick Sort", "Executing QuickSort", algo.sort());
+        assertEquals("Expecting Quick Sort", "Executing DefenceStrategy", algo.sort());
     }
 
     @Test
     public void createRadixSortTest() {
         SortAlgorithm algo = AlgorithmFactory.getAlgorithm(AlgorithmType.RADIX);
-        assertEquals("Expecting Radix Sort", "Executing RadixSort", algo.sort());
+        assertEquals("Expecting Radix Sort", "Executing StandByStrategy", algo.sort());
     }
 }
