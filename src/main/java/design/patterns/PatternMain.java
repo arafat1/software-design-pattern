@@ -6,6 +6,7 @@ public class PatternMain
     {
         System.out.println( "Design Patterns:" );
         System.out.println( "  Strategy Pattern -> Type: Behavioral" );
-        System.out.println( "  Simple Factory Pattern (not a design pattern) -> Type: Creational" );
+        System.out.println( "  Simple Factory Pattern -> Type: Creational" );
+        System.out.println( "  Singleton Pattern -> Type: Creational" );
     }
 }
