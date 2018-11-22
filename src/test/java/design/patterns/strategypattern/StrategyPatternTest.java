@@ -19,7 +19,7 @@ public class StrategyPatternTest {
     }
 
     @Test
-    public void executeStrategyMergeSort() {
+    public void executeStrategyTest() {
         CommanderContext commander = new CommanderContext(new AttackStrategy());
         assertEquals("King sends the commander to attack", "Executing AttackStrategy", commander.executeStrategy());
 
