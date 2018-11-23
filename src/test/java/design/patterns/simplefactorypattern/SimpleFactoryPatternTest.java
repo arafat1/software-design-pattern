@@ -16,6 +16,7 @@ public class SimpleFactoryPatternTest {
     @Test
     public void createMergeSortTest() {
         SortAlgorithm algo = AlgorithmFactory.getAlgorithm(AlgorithmType.MERGE);
+        algo.reverse();
         assertEquals("Expecting Merge Sort", "Executing AttackStrategy", algo.sort());
     }
 
@@ -28,6 +29,7 @@ public class SimpleFactoryPatternTest {
     @Test
     public void createRadixSortTest() {
         SortAlgorithm algo = AlgorithmFactory.getAlgorithm(AlgorithmType.RADIX);
+        algo.reverse();
         assertEquals("Expecting Radix Sort", "Executing StandByStrategy", algo.sort());
     }
 }
