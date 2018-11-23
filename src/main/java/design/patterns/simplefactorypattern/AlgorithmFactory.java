@@ -5,14 +5,16 @@ import design.patterns.simplefactorypattern.algorithms.QuickSort;
 import design.patterns.simplefactorypattern.algorithms.RadixSort;
 import design.patterns.simplefactorypattern.algorithms.SortAlgorithm;
 
-public class AlgorithmFactory {
+public enum AlgorithmFactory {
+    MERGESORT{
+        public SortAlgorithm getAlgorithm() { return new MergeSort(); }
+    },
+    QUICKSORT{
+        public SortAlgorithm getAlgorithm() { return new QuickSort(); }
+    },
+    RADIXSORT{
+        public SortAlgorithm getAlgorithm() { return new RadixSort(); }
+    };
 
-    public static SortAlgorithm getAlgorithm(AlgorithmType algType) {
-        switch (algType) {
-            case MERGE: return new MergeSort();
-            case QUICK: return new QuickSort();
-            case RADIX: return new RadixSort();
-        }
-        return null;
-    }
+    public abstract SortAlgorithm getAlgorithm();
 }
