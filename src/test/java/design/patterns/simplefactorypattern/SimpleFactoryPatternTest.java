@@ -15,20 +15,20 @@ public class SimpleFactoryPatternTest {
 
     @Test
     public void createMergeSortTest() {
-        SortAlgorithm algo = AlgorithmFactory.MERGESORT.getAlgorithm();
+        SortAlgorithm algo = AlgorithmFactory.MERGE_SORT.getAlgorithm();
         algo.reverse();
         assertEquals("Expecting Merge Sort", "Executing AttackStrategy", algo.sort());
     }
 
     @Test
     public void createQuickSortTest() {
-        SortAlgorithm algo = AlgorithmFactory.QUICKSORT.getAlgorithm();
+        SortAlgorithm algo = AlgorithmFactory.QUICK_SORT.getAlgorithm();
         assertEquals("Expecting Quick Sort", "Executing DefenceStrategy", algo.sort());
     }
 
     @Test
     public void createRadixSortTest() {
-        SortAlgorithm algo = AlgorithmFactory.RADIXSORT.getAlgorithm();
+        SortAlgorithm algo = AlgorithmFactory.RADIX_SORT.getAlgorithm();
         algo.reverse();
         assertEquals("Expecting Radix Sort", "Executing StandByStrategy", algo.sort());
     }

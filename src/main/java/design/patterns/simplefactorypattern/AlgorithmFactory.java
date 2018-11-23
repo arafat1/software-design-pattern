@@ -6,13 +6,13 @@ import design.patterns.simplefactorypattern.algorithms.RadixSort;
 import design.patterns.simplefactorypattern.algorithms.SortAlgorithm;
 
 public enum AlgorithmFactory {
-    MERGESORT{
+    MERGE_SORT{
         public SortAlgorithm getAlgorithm() { return new MergeSort(); }
     },
-    QUICKSORT{
+    QUICK_SORT{
         public SortAlgorithm getAlgorithm() { return new QuickSort(); }
     },
-    RADIXSORT{
+    RADIX_SORT{
         public SortAlgorithm getAlgorithm() { return new RadixSort(); }
     };
 

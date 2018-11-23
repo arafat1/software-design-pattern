@@ -1,5 +1,6 @@
 package design.patterns.abstractfactorypattern;
 
+import design.patterns.abstractfactorypattern.exception.FoodTypeNotFoundException;
 import design.patterns.factorymethodpattern.burger.BeefBurgerStore;
 import design.patterns.factorymethodpattern.burger.BurgerStore;
 import design.patterns.factorymethodpattern.burger.FishBurgerStore;
@@ -9,20 +10,20 @@ import design.patterns.factorymethodpattern.pizza.VeggiePizzaStore;
 
 public class FastFoodFactory implements AbstractFastFoodFactory{
     @Override
-    public PizzaStore getPizzaFactory(String type) {
+    public PizzaStore getPizzaFactory(FoodTypes type) throws FoodTypeNotFoundException {
         switch (type) {
-            case "Chicken": return new ChickenPizzaStore();
-            case "Veggie":  return new VeggiePizzaStore();
+            case CHICKEN: return new ChickenPizzaStore();
+            case VEGGIE:  return new VeggiePizzaStore();
         }
-        return null;
+        throw new FoodTypeNotFoundException(type.toString());
     }
 
     @Override
-    public BurgerStore getBurgerFactory(String type) {
+    public BurgerStore getBurgerFactory(FoodTypes type) throws FoodTypeNotFoundException {
         switch (type) {
-            case "Beef": return new BeefBurgerStore();
-            case "Fish":  return new FishBurgerStore();
+            case BEEF: return new BeefBurgerStore();
+            case FISH:  return new FishBurgerStore();
         }
-        return null;
+        throw new FoodTypeNotFoundException(type.toString());
     }
 }

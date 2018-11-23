@@ -1,5 +1,6 @@
 package design.patterns.abstractfactorypattern;
 
+import design.patterns.abstractfactorypattern.exception.FoodTypeNotFoundException;
 import design.patterns.factorymethodpattern.burger.BurgerStore;
 import design.patterns.factorymethodpattern.burger.FishBurgerStore;
 import design.patterns.factorymethodpattern.pizza.PizzaStore;
@@ -17,10 +18,10 @@ public class FastFoodFactoryTest {
     }
 
     @Test
-    public void abstractFactoryTest() {
+    public void abstractFactoryTest() throws FoodTypeNotFoundException {
         AbstractFastFoodFactory foodFactory = new FastFoodFactory();
-        BurgerStore fishBurgerStore = foodFactory.getBurgerFactory("Fish");
-        PizzaStore veggiePizzaStore = foodFactory.getPizzaFactory("Veggie");
+        BurgerStore fishBurgerStore = foodFactory.getBurgerFactory(FoodTypes.FISH);
+        PizzaStore veggiePizzaStore = foodFactory.getPizzaFactory(FoodTypes.VEGGIE);
 
         fishBurgerStore.order();
         veggiePizzaStore.order();
