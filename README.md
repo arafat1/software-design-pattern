@@ -6,4 +6,5 @@ Pattern | Type
 ------- | -------
 Strategy | Behavioral
 Singleton | Creational
+Builder | Creational
 Simple Factory (Not a pattern) | Creational
