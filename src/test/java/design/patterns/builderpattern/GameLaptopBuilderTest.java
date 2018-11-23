@@ -3,7 +3,6 @@ package design.patterns.builderpattern;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import static design.patterns.builderpattern.GameLaptop.Builder;
 import static design.patterns.builderpattern.AbstractLaptop.Color;
 import static design.patterns.builderpattern.AbstractLaptop.Size;
 import static org.junit.Assert.*;
@@ -17,7 +16,7 @@ public class GameLaptopBuilderTest {
 
     @Test
     public void gameLaptopTest() {
-        Builder gameLaptopBuilder = new Builder(4, 2);
+        GameLaptop.Builder gameLaptopBuilder = new GameLaptop.Builder(4, 2);
         gameLaptopBuilder.setColor(Color.GREEN);
         gameLaptopBuilder.setSize(Size.LARGE);
         GameLaptop laptop = gameLaptopBuilder.build();

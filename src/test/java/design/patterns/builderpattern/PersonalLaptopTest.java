@@ -4,7 +4,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import static design.patterns.builderpattern.PersonalLaptop.Builder;
 import static design.patterns.builderpattern.PersonalLaptop.Suite;
 import static design.patterns.builderpattern.AbstractLaptop.Color;
 import static design.patterns.builderpattern.AbstractLaptop.Size;
@@ -19,7 +18,7 @@ public class PersonalLaptopTest {
 
     @Test
     public void personalLaptopTest() {
-        Builder personalLaptopBuilder = new Builder(Suite.PREMIUM);
+        PersonalLaptop.Builder personalLaptopBuilder = new PersonalLaptop.Builder(Suite.PREMIUM);
         personalLaptopBuilder.setColor(Color.BLACK);
 
         PersonalLaptop laptop = personalLaptopBuilder.build();
