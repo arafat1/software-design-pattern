@@ -4,9 +4,10 @@ Design Patterns Implemented so far:
 
 Pattern | Type
 ------- | -------
-Strategy | Behavioral
 Singleton | Creational
 Builder | Creational
 Factory Method | Creational
 Abstract Factory | Creational
 Simple Factory (Not a pattern) | Creational
+Strategy | Behavioral
+Facade | Structural
