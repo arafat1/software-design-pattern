@@ -13,5 +13,13 @@ pipeline {
 mvn compile'''
       }
     }
+    stage('Test') {
+      environment {
+        CI = 'true'
+      }
+      steps {
+        sh 'mvn test'
+      }
+    }
   }
 }
